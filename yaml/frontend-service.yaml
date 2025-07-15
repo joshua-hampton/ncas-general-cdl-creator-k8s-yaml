@@ -1,0 +1,16 @@
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: ncas-general-cdl-creator-frontend-service
+  namespace: ncas-data-activity
+spec:
+  selector:
+    app: ncas-general-cdl-creator-frontend
+  type: ClusterIP
+  ports:
+  - name: ncas-general-cdl-creator-frontend
+    protocol: TCP
+    port: 3080
+    targetPort: 80
+
