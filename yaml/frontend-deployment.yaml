@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ncas-general-cdl-creator-frontend 
+  name: ncas-general-cdl-creator-frontend
   namespace: ncas-data-activity
   labels:
-    app: ncas-general-cdl-creator-frontend 
+    app: ncas-general-cdl-creator-frontend
 spec:
   selector:
     matchLabels:
@@ -16,8 +16,7 @@ spec:
         app: ncas-general-cdl-creator-frontend
     spec:
       containers:
-      - name: ncas-general-cdl-creator-frontend 
-        image: jmhampton/ncas-general-cdl-creator-frontend:0.1.2
-        ports:
-        - containerPort: 80
-
+        - name: ncas-general-cdl-creator-frontend
+          image: jmhampton/ncas-general-cdl-creator-frontend:0.1.3
+          ports:
+            - containerPort: 80
