@@ -21,5 +21,5 @@ spec:
           service:
             name: ncas-general-cdl-creator-frontend-service
             port:
-              number: 3080
+              number: 80
 
