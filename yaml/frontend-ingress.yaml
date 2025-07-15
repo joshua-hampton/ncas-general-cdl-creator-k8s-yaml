@@ -17,7 +17,7 @@ spec:
     http:
       paths:
       - path: /ncas-general-cdl(/|$)(.*)
-        pathType: Prefix 
+        pathType: ImplementationSpecific 
         backend:
           service:
             name: ncas-general-cdl-creator-frontend-service
