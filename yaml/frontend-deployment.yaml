@@ -16,7 +16,7 @@ spec:
         app: ncas-general-cdl-creator-frontend
     spec:
       containers:
-      - name: 
+      - name: ncas-general-cdl-creator-frontend 
         image: jmhampton/ncas-general-cdl-creator-frontend:0.1.0
         ports:
         - containerPort: 80
