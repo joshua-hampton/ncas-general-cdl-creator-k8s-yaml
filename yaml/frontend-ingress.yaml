@@ -7,6 +7,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
     nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   tls:
   - hosts:
@@ -16,7 +17,7 @@ spec:
   - host: force-test.ddns.net
     http:
       paths:
-      - path: /ncas-general-cdl
+      - path: /ncas-general-cdl(/|$)(.*)
         pathType: ImplementationSpecific
         backend:
           service:
