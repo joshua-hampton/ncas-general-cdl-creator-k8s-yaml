@@ -19,4 +19,4 @@ spec:
         - name: ncas-general-cdl-creator-backend
           image: jmhampton/ncas-general-cdl-creator-backend:0.1.0
           ports:
-            - containerPort: 80
+            - containerPort: 3000
