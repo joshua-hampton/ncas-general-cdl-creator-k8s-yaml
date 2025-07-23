@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ncas-general-cdl-creator-backend
+  namespace: ncas-data-activity
+  labels:
+    app: ncas-general-cdl-creator-backend
+spec:
+  selector:
+    matchLabels:
+      app: ncas-general-cdl-creator-backend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: ncas-general-cdl-creator-backend
+    spec:
+      containers:
+        - name: ncas-general-cdl-creator-backend
+          image: jmhampton/ncas-general-cdl-creator-backend:0.0.0
+          ports:
+            - containerPort: 80

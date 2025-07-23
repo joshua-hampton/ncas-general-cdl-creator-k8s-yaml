@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ncas-general-cdl-creator-ingress 
+  namespace: ncas-data-activity
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  tls:
+  - hosts:
+      - force-test.ddns.net
+    secretName: ncas-general-cdl-creator-tls
+  rules:
+  - host: force-test.ddns.net
+    http:
+      paths:
+      - path: /ncas-general-cdl/api(/|$)(.*)
+        pathType: ImplementationSpecific 
+        backend:
+          service:
+            name: ncas-general-cdl-creator-backend-service
+            port:
+              number: 80
+
+
