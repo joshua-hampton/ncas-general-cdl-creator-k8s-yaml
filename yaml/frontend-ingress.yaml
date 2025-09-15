@@ -13,7 +13,7 @@ spec:
       - ncasdatatools.ddns.net
     secretName: ncas-general-cdl-creator-tls
   rules:
-  - host: force-test.ddns.net
+  - host: ncasdatatools.ddns.net
     http:
       paths:
       - path: /ncas-general-cdl(/|$)(.*)
