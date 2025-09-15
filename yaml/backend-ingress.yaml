@@ -10,7 +10,7 @@ metadata:
 spec:
   tls:
   - hosts:
-      - force-test.ddns.net
+      - ncasdatatools.ddns.net
     secretName: ncas-general-cdl-creator-tls
   rules:
   - host: force-test.ddns.net
